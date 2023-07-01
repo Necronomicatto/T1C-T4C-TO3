@@ -19,11 +19,30 @@ public class GM_BRD {
     public void prntBRD(){                //Tabula trahere
         System.out.println("------------------");
         for (int rw = 0; rw < 3; rw++) {
-            System.out.println("| ");
+            System.out.print("| ");
             for (int cl = 0; cl < 3; cl++) {
-                System.out.println(brd[rw][cl]+" | ");
+                System.out.print(brd[rw][cl] + " | ");
             }
             System.out.println("\n------------------");
         }
+    }
+
+    public void mkMv(int rw, int cl, char plr){
+        brd[rw][cl] = plr;
+    }
+
+    public char getMrk(int rw, int cl) {
+        return brd[rw][cl];
+    }
+
+    public boolean BrdFll(){
+        for (int rw = 0; rw < 3; rw++){
+            for (int cl = 0; cl < 3; cl++){
+                if (brd[rw][cl] == '-'){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
