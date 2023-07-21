@@ -63,6 +63,15 @@ public class GM_LGC {
                 return true;
             }
         }
+
+        if((brd.getMrk(0, 0) == crrntPlayer &&
+            brd.getMrk(1, 1) == crrntPlayer &&
+            brd.getMrk(2, 2) == crrntPlayer)||(brd.getMrk(0, 2) == crrntPlayer &&
+                brd.getMrk(1, 1) == crrntPlayer &&
+                brd.getMrk(2, 0) == crrntPlayer)){
+            return true;
+        }
+
     return false;
     }
 }
